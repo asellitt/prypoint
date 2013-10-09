@@ -1,15 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    better_errors (0.7.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     coderay (1.0.9)
     columnize (0.3.6)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     debugger (1.6.2)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.2.3)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.3)
+    erubis (2.7.0)
     eventmachine (1.0.3)
     method_source (0.8.2)
     pry (0.9.12.2)
@@ -37,6 +44,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   pry-debugger
   sinatra
   thin
