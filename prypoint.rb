@@ -22,20 +22,24 @@ options '/json*' do
   request.params["json"]
 end
 
-get '/*' do
+get '/pry*' do
   response.headers['Access-Control-Allow-Origin'] = '*';
   response.headers['Access-Control-Allow-Headers'] = request.env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'];
   binding.pry
 end
 
-post '/*' do
+post '/pry*' do
   response.headers['Access-Control-Allow-Origin'] = '*';
   response.headers['Access-Control-Allow-Headers'] = request.env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'];
   pry.binding
 end
 
-options '/*' do
+options '/pry*' do
   response.headers['Access-Control-Allow-Origin'] = '*';
   response.headers['Access-Control-Allow-Headers'] = request.env['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'];
   pry.binding
+end
+
+get '/' do
+  "Oh Hai! You know what to do..."
 end
