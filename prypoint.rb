@@ -4,7 +4,7 @@ require 'better_errors'
 
 configure do
   use BetterErrors::Middleware
-  BetterErrors::Middleware.allow_ip! 220.244.159.182
+  BetterErrors::Middleware.allow_ip! '220.244.159.182'
 end
 
 before do
